@@ -25,6 +25,11 @@
     --button-primary-hover: #ccc;
     --button-secondary-hover: #1a1a1a;
   }
+  .main {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: #1a1a1a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
 }
 
 .main {
@@ -32,7 +37,15 @@
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
+
+  /* Add these for the soft rectangle effect */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* subtle border */
+  border-radius: 16px; /* rounded corners */
+  padding: 32px; /* space inside */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* soft shadow for depth */
+  background: white; /* so it stands out on dark background */
 }
+
 
 .main ol {
   font-family: var(--font-geist-mono);
