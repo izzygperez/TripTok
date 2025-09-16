@@ -1,42 +1,68 @@
 :root {
-  --background: #ffffff;
+  --background: #fcf3e3;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+  color: var(--foreground);
   margin: 0;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
 }
 
-a {
-  color: inherit;
+/* apply Sigmar One via the injected CSS variable */
+h1 {
+  font-family: var(--font-sigmar-one);
+  color: #013d5a;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dropdown {
+  text-align: right;
+  position: absolute;
+  left: 80%;
+  padding-bottom: 1%;
+}
+
+.dropbtn {
+  background-color: #bde3ce;
+  color: #013d5a;
+  font-family: var(--font-montserrat);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  font-family: var(--font-montserrat);
+  background-color: #bde3ce;
+  border-radius: 25;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #013d5a;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  display: block;
+  padding: 16px;
 }
