@@ -1,9 +1,32 @@
 "use client"
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { X } from 'lucide-react'
 import Image from "next/image";
 
 export default function Home() {
-  const [openModal, setOpenModal] = useState(false)
+  const dialogRef = useRef(null);
+  const [activeImage, setActiveImage] = useState()
+  console.log('active image', activeImage)
+
+  useEffect(() => {
+    if (!activeImage) return;
+
+    dialogRef.current?.showModal();
+
+    document.body.style.overflow = 'hidden'; // if modal is open you can't scroll the page
+    
+    dialogRef.current?.addEventListener('close', closeModal); // when the action of closing the modal occurs call the function closeModal
+  
+    return () => {
+      dialogRef.current?.removeEventListener('close', closeModal);
+    }
+  }, [activeImage])
+
+  function closeModal() {
+    dialogRef.current?.close();
+    setActiveImage(undefined);
+    document.body.style.overflow = '';
+  }
 
   return (
     <main>
@@ -46,7 +69,26 @@ export default function Home() {
         </section>
         <section className="imageFeed">
           <div className="imgGrid">
-            <div className="pic"><Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image></div>
+            <dialog ref={dialogRef} className="relative backdrop:bg-black/85 overflow-visible" >
+              <div className="relative z-0 max-w-[90vw] max-h-[90vh]">
+                {activeImage && (
+                  <Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" width={400} height={400}></Image>
+                )}
+              </div>
+              <button 
+                className="absolute -top-2 -right-2 z-1 flex items-center justify-center w-5 h-5 bg-zinc-200 rounded-full shadow"
+                onClick={closeModal}
+              >
+                <X className="w-4 h-4 text-zinc-900" />
+                <span className="sr-only">Close</span>
+              </button>
+              
+            </dialog>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg_inside.jpg")}>
+                <Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image>
+              </button>
+            </div>
             <div className="pic"><Image src="/images/gbg_inside.jpg" alt="Gyeongbokgung Building" fill></Image></div>
             <div className="pic"><Image src="/images/gbg_show.jpg" alt="Gyeongbokgung Parade" fill></Image></div>
             <div className="pic"><Image src="/images/GBG.jpg" alt="Gyeongbokgung at Night" fill></Image></div>
