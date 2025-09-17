@@ -18,6 +18,16 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-family: var(--font-sigmar-one);
+  color: #013d5a;
+  text-align: center;
+}
+
+.placeType {
+  color: #fcf3e3;
+}
+
 .title {
   font-size: 3rem;
 }
@@ -64,5 +74,11 @@ header {
   color: #013d5a;
   text-decoration: none;
   display: block;
+  padding: 16px;
+}
+
+.locations {
+  background-color: #708C69;
+  border-radius: 25;
   padding: 16px;
 }

@@ -14,7 +14,23 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <p>This should render with the Sigmar One font.</p>
+      <article>
+      <section className="locations">
+        <h2 className="placeType">Historical Places</h2>
+        <button className="address">Gyeongbokgung</button>
+        <button className="address">Bukchon Hanok Village</button>
+        <h2 className="placeType">Cultural Landmarks</h2>
+        <button className="address">DMZ</button>
+        <button className="address">Han River</button>
+      </section>
+      <section>
+        <p>IMAGES</p>
+      </section>
+      <section className="notes">
+        <h2>Notes</h2>
+        <p>IDK SOMETHING</p>
+      </section>
+      </article>
     </main>
   );
 }
