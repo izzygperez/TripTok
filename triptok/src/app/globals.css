@@ -47,7 +47,7 @@ header {
 }
 
 .dropbtn {
-  background-color: #bde3ce;
+  background-color: #ffd4c4;
   color: #013d5a;
   font-family: var(--font-montserrat);
   padding: 16px;
@@ -62,7 +62,7 @@ header {
   top: 100%;
   right: 0%;
   font-family: var(--font-montserrat);
-  background-color: #bde3ce;
+  background-color: #ffd4c4;
   border-radius: 25;
 }
 
@@ -77,8 +77,44 @@ header {
   padding: 16px;
 }
 
+.dropdown-content a:hover {
+  background-color: #ffb979;
+}
+
+#dd1 {
+  border-radius: 25 25 0 0;
+}
+
+#dd3 {
+  border-radius: 0 0 25 25;
+}
+
+article {
+  display: flex;
+  justify-content: space-around;
+}
+
 .locations {
-  background-color: #708C69;
+  background-color: #708c69;
   border-radius: 25;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.address {
+  background-color: #eef4ce;
+  border: none;
+  border-radius: 25;
+  padding: 16px;
+  font-family: var(--font-montserrat);
+  color: #013d5a;
+  margin-bottom: 5%;
+  text-align: left;
+}
+
+.notes {
+  background-color: #bde3ce;
+  border-radius: 25;
+  padding: 30px;
 }
