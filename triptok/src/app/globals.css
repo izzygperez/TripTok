@@ -113,6 +113,18 @@ article {
   text-align: left;
 }
 
+.address:active {
+  background-color: #ffb979;
+}
+
+span {
+  font-weight: bold;
+}
+
+.addyName {
+  font-style: italic;
+}
+
 .notes {
   background-color: #bde3ce;
   border-radius: 25;

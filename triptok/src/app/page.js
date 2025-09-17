@@ -17,11 +17,23 @@ export default function Home() {
       <article>
         <section className="locations">
           <h2 className="placeType">Historical Places</h2>
-          <button className="address">Gyeongbokgung</button>
-          <button className="address">Bukchon Hanok Village</button>
+          <button className="address">
+            <span className="addyName">Gyeongbokgung</span><br></br>
+            <span>161 Sajik-ro, Jongno-gu, Seoul</span>
+          </button>
+          <button className="address">
+            <span className="addyName">Bukchon Hanok Village</span><br></br>
+            <span>37 Gyedong-gil, Jongno-gu, Seoul</span>
+            </button>
           <h2 className="placeType">Cultural Landmarks</h2>
-          <button className="address">DMZ</button>
-          <button className="address">Han River</button>
+          <button className="address">
+            <span className="addyName">DMZ</span><br></br>
+            <span>???</span>
+          </button>
+          <button className="address">
+            <span className="addyName">Han River</span><br></br>
+            <span>330 Yeouidong-ro, Yeongdeungpo-gu, Seoul</span>
+          </button>
         </section>
         <section>
           <p>IMAGES</p>
