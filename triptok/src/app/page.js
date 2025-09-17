@@ -72,7 +72,7 @@ export default function Home() {
             <dialog ref={dialogRef} className="relative backdrop:bg-black/85 overflow-visible" >
               <div className="relative z-0 max-w-[90vw] max-h-[90vh]">
                 {activeImage && (
-                  <Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" width={400} height={400}></Image>
+                  <Image src={activeImage} alt="Older Gyeongbokgung Image" width={400} height={400}></Image>
                 )}
               </div>
               <button 
@@ -82,30 +82,97 @@ export default function Home() {
                 <X className="w-4 h-4 text-zinc-900" />
                 <span className="sr-only">Close</span>
               </button>
-              
             </dialog>
             <div className="pic">
-              <button onClick={() => setActiveImage("/images/gbg_inside.jpg")}>
+              <button onClick={() => setActiveImage("/images/gbg_history.jpg")}>
                 <Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image>
               </button>
             </div>
-            <div className="pic"><Image src="/images/gbg_inside.jpg" alt="Gyeongbokgung Building" fill></Image></div>
-            <div className="pic"><Image src="/images/gbg_show.jpg" alt="Gyeongbokgung Parade" fill></Image></div>
-            <div className="pic"><Image src="/images/GBG.jpg" alt="Gyeongbokgung at Night" fill></Image></div>
-            <div className="pic"><Image src="/images/gbg(1).jpg" alt="Gyeongbokgung with Snow" fill></Image></div>
-            <div className="pic"><Image src="/images/gyeongbokgung.jpg" alt="Gyeongbokgung" fill></Image></div>
-            <div className="pic"><Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image></div>
-            <div className="pic"><Image src="/images/gbg_inside.jpg" alt="Gyeongbokgung Building" fill></Image></div>
-            <div className="pic"><Image src="/images/gbg_show.jpg" alt="Gyeongbokgung Parade" fill></Image></div>
-            <div className="pic"><Image src="/images/GBG.jpg" alt="Gyeongbokgung at Night" fill></Image></div>
-            <div className="pic"><Image src="/images/gbg(1).jpg" alt="Gyeongbokgung with Snow" fill></Image></div>
-            <div className="pic"><Image src="/images/gyeongbokgung.jpg" alt="Gyeongbokgung" fill></Image></div>
-            <div className="pic"><Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image></div>
-            <div className="pic"><Image src="/images/gbg_inside.jpg" alt="Gyeongbokgung Building" fill></Image></div>
-            <div className="pic"><Image src="/images/gbg_show.jpg" alt="Gyeongbokgung Parade" fill></Image></div>
-            <div className="pic"><Image src="/images/GBG.jpg" alt="Gyeongbokgung at Night" fill></Image></div>
-            <div className="pic"><Image src="/images/gbg(1).jpg" alt="Gyeongbokgung with Snow" fill></Image></div>
-            <div className="pic"><Image src="/images/gyeongbokgung.jpg" alt="Gyeongbokgung" fill></Image></div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg_inside.jpg")}>
+                <Image src="/images/gbg_inside.jpg" alt="Gyeongbokgung Building" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg_show.jpg")}>
+                <Image src="/images/gbg_show.jpg" alt="Gyeongbokgung Parade" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/GBG.jpg")}>
+                <Image src="/images/GBG.jpg" alt="Gyeongbokgung at Night" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg(1).jpg")}>
+                <Image src="/images/gbg(1).jpg" alt="Gyeongbokgung with Snow" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gyeongbokgung.jpg")}>
+                <Image src="/images/gyeongbokgung.jpg" alt="Gyeongbokgung" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg_history.jpg")}>
+                <Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg_inside.jpg")}>
+                <Image src="/images/gbg_inside.jpg" alt="Gyeongbokgung Building" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg_show.jpg")}>
+                <Image src="/images/gbg_show.jpg" alt="Gyeongbokgung Parade" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/GBG.jpg")}>
+                <Image src="/images/GBG.jpg" alt="Gyeongbokgung at Night" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg(1).jpg")}>
+                <Image src="/images/gbg(1).jpg" alt="Gyeongbokgung with Snow" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gyeongbokgung.jpg")}>
+                <Image src="/images/gyeongbokgung.jpg" alt="Gyeongbokgung" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg_history.jpg")}>
+                <Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg_inside.jpg")}>
+                <Image src="/images/gbg_inside.jpg" alt="Gyeongbokgung Building" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg_show.jpg")}>
+                <Image src="/images/gbg_show.jpg" alt="Gyeongbokgung Parade" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/GBG.jpg")}>
+                <Image src="/images/GBG.jpg" alt="Gyeongbokgung at Night" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gbg(1).jpg")}>
+                <Image src="/images/gbg(1).jpg" alt="Gyeongbokgung with Snow" fill></Image>
+              </button>
+            </div>
+            <div className="pic">
+              <button onClick={() => setActiveImage("/images/gyeongbokgung.jpg")}>
+                <Image src="/images/gyeongbokgung.jpg" alt="Gyeongbokgung" fill></Image>
+              </button>
+            </div>
           </div>
         </section>
         <section className="notes">
