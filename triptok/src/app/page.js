@@ -1,8 +1,15 @@
+"use client";
+import { useState } from "react";
 import styles from "./page.module.css";
+import Modal from "./components/modal";
 
 export default function Home() {
+  const [openModal, setOpenModal] = useState(false)
+
   return (
     <div className={styles.page}>
+      <button className="openModalBtn" onClick={() => {setOpenModal(true)}}>testing</button>
+      {openModal && <Modal closeModal={setOpenModal}/>}
       <main className={styles.main}>
         <div className="{stlyes.container}">
           <h1
@@ -30,6 +37,7 @@ export default function Home() {
             <a className={styles.secondary} href="#">
               Read our docs
             </a>
+            
           </div>
         </div>
       </main>
