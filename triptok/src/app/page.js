@@ -1,7 +1,12 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main>
       <header>
+        <button className="home"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi-house-door" viewBox="0 0 16 16">
+  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+</svg></button>
         <h1 className="title">TripTime</h1>
         <div className="dropdown">
           <button className="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#013d5a" className="bi-caret-down-fill" viewBox="0 0 16 16">
@@ -35,8 +40,27 @@ export default function Home() {
             <span>330 Yeouidong-ro, Yeongdeungpo-gu, Seoul</span>
           </button>
         </section>
-        <section>
-          <p>IMAGES</p>
+        <section className="imageFeed">
+          <div className="imgGrid">
+            <div className="pic"><Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg_inside.jpg" alt="Gyeongbokgung Building" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg_show.jpg" alt="Gyeongbokgung Parade" fill></Image></div>
+            <div className="pic"><Image src="/images/GBG.jpg" alt="Gyeongbokgung at Night" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg(1).jpg" alt="Gyeongbokgung with Snow" fill></Image></div>
+            <div className="pic"><Image src="/images/gyeongbokgung.jpg" alt="Gyeongbokgung" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg_inside.jpg" alt="Gyeongbokgung Building" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg_show.jpg" alt="Gyeongbokgung Parade" fill></Image></div>
+            <div className="pic"><Image src="/images/GBG.jpg" alt="Gyeongbokgung at Night" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg(1).jpg" alt="Gyeongbokgung with Snow" fill></Image></div>
+            <div className="pic"><Image src="/images/gyeongbokgung.jpg" alt="Gyeongbokgung" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg_inside.jpg" alt="Gyeongbokgung Building" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg_show.jpg" alt="Gyeongbokgung Parade" fill></Image></div>
+            <div className="pic"><Image src="/images/GBG.jpg" alt="Gyeongbokgung at Night" fill></Image></div>
+            <div className="pic"><Image src="/images/gbg(1).jpg" alt="Gyeongbokgung with Snow" fill></Image></div>
+            <div className="pic"><Image src="/images/gyeongbokgung.jpg" alt="Gyeongbokgung" fill></Image></div>
+          </div>
         </section>
         <section className="notes">
           <h2>Notes</h2>

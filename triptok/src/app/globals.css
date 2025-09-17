@@ -30,6 +30,21 @@ h2 {
 
 .title {
   font-size: 3rem;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.home {
+  border: none;
+  background-color:#fcf3e3;
+  border-radius: 100%;
+  position: absolute;
+  right: 90%;
+  padding: 1%;
+}
+
+.home:active{
+  background-color:#ffb979;
 }
 
 header {
@@ -39,10 +54,17 @@ header {
   position: relative;
 }
 
+@media (max-width: 500px) {
+  article {
+    flex-direction: column;
+    height: auto;  /* allow natural height when stacked */
+  }
+}
+
 .dropdown {
   text-align: right;
   position: absolute;
-  left: 80%;
+  left: 85%;
   padding-bottom: 1%;
 }
 
@@ -91,15 +113,19 @@ header {
 
 article {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  gap: 2rem;
+  height: 75vh;
 }
 
 .locations {
   background-color: #708c69;
   border-radius: 25;
-  padding: 16px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .address {
@@ -125,8 +151,85 @@ span {
   font-style: italic;
 }
 
+.imageFeed {
+  flex: 2;
+  min-width: 0;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+.imgGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.imageFeed img {
+  object-fit: cover;
+}
+
+.pic {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
 .notes {
   background-color: #bde3ce;
   border-radius: 25;
   padding: 30px;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .placeType {
+    font-size: medium;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  span {
+    font-size: xx-small;
+  }
+  .imgGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .home {
+    position: static;
+    transform: none;
+    padding: 2%;
+  }
+
+  .dropdown {
+    position: static;
+    transform: none;
+  }
+
+  .dropdown-content {
+    position: static;
+    transform: none;
+    margin-top: 0.5rem;
+  }
+
+  article {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .locations {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .imgGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
