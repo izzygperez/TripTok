@@ -1,40 +1,43 @@
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const cards = [
+    { src: "/gbg_show.jpg", label: "Culture", slug: "culture" },
+    { src: "/hanPark.jpg", label: "Eat & Drink", slug: "eat-drink" },
+    { src: "/GBG.jpg", label: "Activities", slug: "activities" },
+  ];
+
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <div className="{stlyes.container}">
-          <h1
-            style={{
-              fontSize: "3rem",
-              fontWeight: "bold",
-              letterSpacing: "2px",
-              color: "#4f46e5",
-              textShadow: "2px 2px 6px rgba(0,0,0,0.2)",
-              marginBottom: "1rem",
-            }}
+      <header className={styles.header}>
+        <h1 className={styles.title}>TripTime</h1>
+        <select className={styles.dropdown}>
+          <option>Seoul, South Korea</option>
+          <option>Tokyo, Japan</option>
+          <option>Paris, France</option>
+        </select>
+      </header>
+
+      <main className={styles.cards}>
+        {cards.map((card, i) => (
+          <a
+            key={i}
+            href={`/destination/${card.slug}`} // dynamic route
+            className={styles.card}
           >
-            Travel Time ✈️
-          </h1>
-
-          <ol>
-            <li>Welcome to the base website for Travel Time.</li>
-            <li>Save and see your changes instantly.</li>
-          </ol>
-
-          <div className={styles.ctas}>
-            <a className={styles.primary} href="#">
-                Deploy now
-            </a>
-            <a className={styles.secondary} href="#">
-              Read our docs
-            </a>
-          </div>
-        </div>
+            <Image
+              src={card.src}
+              alt={card.label}
+              width={320}
+              height={450}
+              className={styles.image}
+              priority
+            />
+            <p className={styles.label}>{card.label}</p>
+          </a>
+        ))}
       </main>
-
-    <footer className={styles.footer}>Footer content here</footer>
-  </div>
+    </div>
   );
 }
