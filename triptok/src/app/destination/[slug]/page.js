@@ -1,5 +1,4 @@
 import { Sigmar_One, Montserrat } from "next/font/google";
-import "./globals.css";
 
 const sigmarOne = Sigmar_One({
   // explicitly list the only available weight
