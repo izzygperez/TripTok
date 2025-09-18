@@ -3,9 +3,9 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const cards = [
-    { src: "/gbg_show.jpg", label: "Culture", slug: "culture" },
-    { src: "/hanPark.jpg", label: "Eat & Drink", slug: "eat-drink" },
-    { src: "/GBG.jpg", label: "Activities", slug: "activities" },
+    { src: "/images/gbg_show.jpg", label: "Culture", slug: "culture" },
+    { src: "/images/hanPark.jpg", label: "Eat & Drink", slug: "eat-drink" },
+    { src: "/images/GBG.jpg", label: "Activities", slug: "activities" },
   ];
 
   return (
