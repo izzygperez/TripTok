@@ -1,11 +1,12 @@
 "use client"
 import { useState, useRef, useEffect } from 'react';
-import { X } from 'lucide-react'
 import Image from "next/image";
 
 export default function Home() {
   const dialogRef = useRef(null);
   const [activeImage, setActiveImage] = useState()
+  const [caption, setCaption] = useState()
+
   console.log('active image', activeImage)
 
   useEffect(() => {
@@ -13,7 +14,9 @@ export default function Home() {
 
     dialogRef.current?.showModal();
 
-    document.body.style.overflow = 'hidden'; // if modal is open you can't scroll the page
+    // if modal is open you can't scroll the page
+    // may shift the page 
+    // document.body.style.overflow = 'hidden'; 
     
     dialogRef.current?.addEventListener('close', closeModal); // when the action of closing the modal occurs call the function closeModal
   
@@ -69,22 +72,27 @@ export default function Home() {
         </section>
         <section className="imageFeed">
           <div className="imgGrid">
-            <dialog ref={dialogRef} className="relative backdrop:bg-black/85 overflow-visible" >
-              <div className="relative z-0 max-w-[90vw] max-h-[90vh]">
-                {activeImage && (
-                  <Image src={activeImage} alt="Older Gyeongbokgung Image" width={400} height={400}></Image>
-                )}
-              </div>
+            <dialog ref={dialogRef} className="modal" >
               <button 
-                className="absolute -top-2 -right-2 z-1 flex items-center justify-center w-5 h-5 bg-zinc-200 rounded-full shadow"
+                className="closeBtn"
                 onClick={closeModal}
               >
-                <X className="w-4 h-4 text-zinc-900" />
-                <span className="sr-only">Close</span>
+                X
               </button>
+              <div className="polaroid-frame">
+                {activeImage && (
+                  <Image src={activeImage} alt={caption} width={400} height={400}></Image>
+                )}
+              </div>
+              <h2>{caption}</h2>
             </dialog>
             <div className="pic">
-              <button onClick={() => setActiveImage("/images/gbg_history.jpg")}>
+              <button 
+                onClick={() => {
+                  setActiveImage("/images/gbg_history.jpg");
+                  setCaption("Older Gyeongbokgung");
+                }}
+              >
                 <Image src="/images/gbg_history.jpg" alt="Older Gyeongbokgung Image" fill></Image>
               </button>
             </div>
