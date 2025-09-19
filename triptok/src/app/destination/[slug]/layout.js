@@ -63,8 +63,8 @@ const imagesBySlug = {
     { src: "/images/gyeongbokgung.jpg", alt: "Gyeongbokgung" },
   ],
   "food-drink": [
-    { src: "/images/food/cafe1.jpg", alt: "Cafe" },
-    { src: "/images/food/street1.jpg", alt: "Street Food" },
+    { src: "/images/food-drink/Clementine (1).jpg", alt: "Clementine dishes" },
+    { src: "/images/food-drink/Clementine2.JPG", alt: "Clementine interior" },
   ],
   activity: [
     { src: "/images/activity/hanriver.jpg", alt: "Han River Park" },
