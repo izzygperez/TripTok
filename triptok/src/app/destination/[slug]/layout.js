@@ -69,14 +69,14 @@ export default function Home() {
         </section>
         <section className={styles.imageFeed}>
           <div className={styles.imgGrid}>
-            <dialog ref={dialogRef} className="modal" >
-              <div className="relative z-0 max-w-[90vw] max-h-[90vh]">
+            <dialog ref={dialogRef} className={styles.modal} >
+              <div>
                 {activeImage && (
                   <Image src={activeImage} alt="Older Gyeongbokgung Image" width={400} height={400}></Image>
                 )}
               </div>
               <button 
-                className="closeBtn"
+                className={styles.closeBtn}
                 onClick={closeModal}
               >
                 X
