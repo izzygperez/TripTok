@@ -9,33 +9,6 @@ export default function Home() {
     { src: "/images/hanPark.jpg", label: "Eat & Drink", slug: "eat-drink" },
     { src: "/images/GBG.jpg", label: "Activities", slug: "activities" },
   ];
-  const dialogRef = useRef(null);
-  const [activeImage, setActiveImage] = useState()
-  const [caption, setCaption] = useState()
-
-  console.log('active image', activeImage)
-
-  useEffect(() => {
-    if (!activeImage) return;
-
-    dialogRef.current?.showModal();
-
-    // if modal is open you can't scroll the page
-    // may shift the page 
-    // document.body.style.overflow = 'hidden'; 
-    
-    dialogRef.current?.addEventListener('close', closeModal); // when the action of closing the modal occurs call the function closeModal
-  
-    return () => {
-      dialogRef.current?.removeEventListener('close', closeModal);
-    }
-  }, [activeImage])
-
-  function closeModal() {
-    dialogRef.current?.close();
-    setActiveImage(undefined);
-    document.body.style.overflow = '';
-  }
 
   return (
     <div className={styles.page}>

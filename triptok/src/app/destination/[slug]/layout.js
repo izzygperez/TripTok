@@ -1,7 +1,7 @@
 "use client"
 import { useState, useRef, useEffect } from 'react';
-import { X } from 'lucide-react'
 import Image from "next/image";
+import "./layout.css";
 
 export default function Home() {
   const dialogRef = useRef(null);
@@ -69,18 +69,17 @@ export default function Home() {
         </section>
         <section className="imageFeed">
           <div className="imgGrid">
-            <dialog ref={dialogRef} className="relative backdrop:bg-black/85 overflow-visible" >
+            <dialog ref={dialogRef} className="modal" >
               <div className="relative z-0 max-w-[90vw] max-h-[90vh]">
                 {activeImage && (
                   <Image src={activeImage} alt="Older Gyeongbokgung Image" width={400} height={400}></Image>
                 )}
               </div>
               <button 
-                className="absolute -top-2 -right-2 z-1 flex items-center justify-center w-5 h-5 bg-zinc-200 rounded-full shadow"
+                className="closeBtn"
                 onClick={closeModal}
               >
-                <X className="w-4 h-4 text-zinc-900" />
-                <span className="sr-only">Close</span>
+                X
               </button>
             </dialog>
             <div className="pic">
