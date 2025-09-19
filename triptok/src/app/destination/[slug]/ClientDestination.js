@@ -3,9 +3,17 @@ import { useState, useRef, useEffect } from 'react';
 import { X } from 'lucide-react'
 import Image from "next/image";
 import styles from "./page.module.css";
+import dynamic from "next/dynamic";
 
-export default function Home() {
-  const dialogRef = useRef(null);
+// Disable SSR for WebSpatial component
+const SpatialScene = dynamic(
+  () => import("@webspatial/react-sdk").then((mod) => mod.SpatialScene),
+  { ssr: false }
+);
+
+export default function ClientDestination({ slug }) {
+
+    const dialogRef = useRef(null);
   const [activeImage, setActiveImage] = useState()
   console.log('active image', activeImage)
 

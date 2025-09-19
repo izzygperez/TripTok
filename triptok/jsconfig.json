@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "@webspatial/react-sdk",
     "paths": {
       "@/*": ["./src/*"]
     }

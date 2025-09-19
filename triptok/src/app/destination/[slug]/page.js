@@ -1,28 +1,19 @@
-import { Sigmar_One, Montserrat } from "next/font/google";
+//"use client";
 
-const sigmarOne = Sigmar_One({
-  // explicitly list the only available weight
-  weight: ["400"],
-  subsets: ["latin"],
-  variable: "--font-sigmar-one",
-});
+import ClientDestination from "./ClientDestination";
+import styles from "./page.module.css";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-});
+export default async function DestinationPage({ params }) {
+  // const { slug } = await params;
 
-export const metadata = {
-  title: "TripTime",
-};
+  const unwrapped = await params;
+  console.log("slug params", unwrapped);
 
-export default function RootLayout({ children }) {
+  const { slug } = unwrapped;
+
   return (
-    <html lang="en">
-      {/* apply the generated class so Next injects the @font-face and sets the CSS variable */}
-      <body className={`${sigmarOne.variable} ${montserrat.variable}`}>
-        {children}
-      </body>
-    </html>
+    <main className={styles.wrapper}>
+      <ClientDestination slug={slug} />
+    </main>
   );
 }
